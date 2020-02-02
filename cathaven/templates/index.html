@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <!--<input type='text' name='name' class='name' style="text-transform: capitalize;" placeholder='Enter your name here'/>-->
+    <h1 style='color: #3a5586'>Hello, {{ user.username }}!</h1>
+    <img src="https://avatars.mds.yandex.net/get-pdb/1623506/94c561ee-20ae-496d-a284-cd0cfbea181c/s1200?webp=false" align="left" height="400" width="500"
+    alt="cute cat">
+    <img src="https://avatars.mds.yandex.net/get-pdb/1209255/e8f00842-2505-4639-b18d-f8cd308348fd/s1200?webp=false" align="left" height="400" width="500"
+    alt="cute cat">
+    <img src="https://avatars.mds.yandex.net/get-pdb/1813909/928ef698-a2ef-47af-8eba-10b1ea1079dc/s1200?webp=false" align="top" height="400" width="500"
+    alt="cute cat">
+
+    {% for post in posts %}
+    <div style='color: #3a5586'><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+    <h1><p style='color: #3a5586'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Aliquam sapien lectus, iaculis id tellus sit amet, aliquet sollicitudin erat.
+          Phasellus sodales lobortis ipsum, et feugiat metus euismod non. Etiam eu massa ac mi convallis rhoncus.
+           Aenean maximus nisi dolor, ullamcorper aliquam purus fringilla quis. Praesent ac orci in tellus maximus fringilla.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+            Morbi interdum, risus ac faucibus accumsan, tortor nisi tempor quam, quis euismod eros velit et dui. 
+            Praesent in maximus est. Etiam a ex id neque convallis viverra.
+         Donec euismod sapien sit amet turpis bibendum ornare. Praesent pretium laoreet vehicula. Praesent non aliquet ante.</p><h1>
+
+{% endblock %}
